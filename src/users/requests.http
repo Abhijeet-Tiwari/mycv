@@ -3,12 +3,23 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "email": "aditya.kumar1@gmail.com",
-  "password": "12345"
+  "email": "test1@test.com",
+  "password": "abcd123"
 }
 
+### Sign In as existing user
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "test1@test.com",
+  "password": "abcd123"
+}
+### SignOut
+POST http://localhost:3000/auth/signout
+
 ###Find a user by ID
-GET http://localhost:3000/auth/2
+GET http://localhost:3000/auth/4
 
 ###Find all users with given email
  GET http://localhost:3000/auth?email=abhijeet.kumar@gmail.com
@@ -23,3 +34,9 @@ Content-Type: application/json
 {
   "password": "12346"
 }
+
+### Set a color
+GET http://localhost:3000/auth/colors/red
+
+### Get the color
+GET http://localhost:3000/auth/colors

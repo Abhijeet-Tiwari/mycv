@@ -14,6 +14,9 @@ export class UsersService {
   }
 
   findOne(id: number) {
+    if (!id) {
+      return null;
+    }
     return this.repo.findOneBy({ id });
   }
 
@@ -36,6 +39,6 @@ export class UsersService {
       throw new NotFoundException(`User not find`);
     }
 
-    return this.repo.remove(user)
+    return this.repo.remove(user);
   }
 }
