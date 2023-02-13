@@ -40,3 +40,7 @@ GET http://localhost:3000/auth/colors/red
 
 ### Get the color
 GET http://localhost:3000/auth/colors
+
+
+### Get currentuser
+GET http://localhost:3000/auth/whoami
